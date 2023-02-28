@@ -8,8 +8,9 @@ You can use the AutoModerator for those functions.
 
 ### Instructions
 - Ensure you have Python installed on your system. You can download it here https://www.python.org/downloads/.
+- Store the python script and the ```details.ini``` file in the same folder.
+- Open your command prompt and change your directory into the script's folder.
 - Install the PRAW package ```pip install praw```.
 - Create a Reddit App (script) at https://www.reddit.com/prefs/apps/ and get your specified keys.
-- Store the python script and the details.ini file in the same folder.
-- Edit the details.ini file with your details.
+- Edit the ```details.ini``` file with your details.
 - Run the program ```python main.py```.
