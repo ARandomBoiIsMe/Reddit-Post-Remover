@@ -20,7 +20,7 @@ def main():
         user_agent=user_agent
     )
 
-    subreddit_name = ''
+    subreddit_name = os.getenv('SUBREDDIT_NAME')
     subreddit = reddit.subreddit(subreddit_name)
 
     posts = getPosts(subreddit)
