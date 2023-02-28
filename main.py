@@ -20,7 +20,7 @@ def main():
         user_agent=user_agent
     )
 
-    subreddit_name = 'AnotherTest1234'
+    subreddit_name = ''
     subreddit = reddit.subreddit(subreddit_name)
 
     posts = getPosts(subreddit)
@@ -32,7 +32,7 @@ def main():
 
     Proceeds to remove comments from remaining posts which contain the keywords.
     """
-    keywords = ['abnormal']
+    keywords = []
     posts = remove_by_post_title(posts, keywords)
     posts = remove_by_post_body(posts, keywords)
     remove_comments(posts, keywords)
