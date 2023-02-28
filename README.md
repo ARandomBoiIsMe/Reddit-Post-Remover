@@ -7,7 +7,7 @@ This script does not run continuously, and it does not scan incoming posts/comme
 You can use the AutoModerator for those functions.
 
 ### Instructions
-- Ensure you have Python installed on your system. You can download it here https://www.python.org/downloads/.
+- Ensure you have Python installed on your system. You can download it here https://www.python.org/downloads/ (Add to PATH during the installation).
 - Store the python script and the ```details.ini``` file in the same folder.
 - Open your command prompt and change your directory into the script's folder.
 - Install the PRAW package ```pip install praw```.
