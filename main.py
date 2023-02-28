@@ -9,14 +9,13 @@ def main():
     client_secret = config['REDDIT']['CLIENT_SECRET']
     password = config['REDDIT']['PASSWORD']
     username = config['REDDIT']['USERNAME_REDDIT']
-    user_agent = config['REDDIT']['USER_AGENT']
 
     reddit = praw.Reddit(
         client_id=client_id,
         client_secret=client_secret,
         password=password,
         username=username,
-        user_agent=user_agent
+        user_agent='script:Post Remover:1.0 (by ARandomBoiIsMe)'
     )
 
     subreddit_name = config['VARS']['SUBREDDIT_NAME']
