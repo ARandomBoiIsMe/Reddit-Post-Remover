@@ -1,16 +1,16 @@
 import praw
-from dotenv.main import load_dotenv
-import os
+import configparser
 import prawcore
 
 def main():
-    load_dotenv("details.env")
+    config = configparser.ConfigParser()
+    config.read('details.ini')
 
-    client_id = os.getenv('CLIENT_ID')
-    client_secret = os.getenv('CLIENT_SECRET')
-    password = os.getenv('PASSWORD')
-    username = os.getenv('USERNAME_REDDIT')
-    user_agent = os.getenv('USER_AGENT')
+    client_id = config['REDDIT']['CLIENT_ID']
+    client_secret = config['REDDIT']['CLIENT_SECRET']
+    password = config['REDDIT']['PASSWORD']
+    username = config['REDDIT']['USERNAME_REDDIT']
+    user_agent = config['REDDIT']['USER_AGENT']
 
     reddit = praw.Reddit(
         client_id=client_id,
@@ -20,7 +20,7 @@ def main():
         user_agent=user_agent
     )
 
-    subreddit_name = os.getenv('SUBREDDIT_NAME')
+    subreddit_name = config['VARS']['SUBREDDIT_NAME']
     subreddit = reddit.subreddit(subreddit_name)
 
     posts = getPosts(subreddit)
@@ -32,7 +32,7 @@ def main():
 
     Proceeds to remove comments from remaining posts which contain the keywords.
     """
-    keywords = os.getenv('KEYWORDS')
+    keywords = config['VARS']['KEYWORDS']
     posts = remove_by_post_title(posts, keywords)
     posts = remove_by_post_body(posts, keywords)
     remove_comments(posts, keywords)
