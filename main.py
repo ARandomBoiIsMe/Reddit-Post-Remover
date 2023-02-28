@@ -1,6 +1,5 @@
 import praw
 import configparser
-import prawcore
 
 def main():
     config = configparser.ConfigParser()
