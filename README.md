@@ -8,8 +8,8 @@ You can use the AutoModerator for those functions.
 
 ### Instructions
 - Ensure you have Python installed on your system. You can download it here https://www.python.org/downloads/ (Add to PATH during the installation).
-- Store the python script and the ```details.ini``` file in the same folder.
-- Open your command prompt and change your directory into the script's folder.
+- Download the ZIP file of this repo (Click on ```Code``` -> ```Download ZIP```).
+- Open your command prompt and change your directory to where you unzipped the files.
 - Install the PRAW package ```pip install praw```.
 - Create a Reddit App (script) at https://www.reddit.com/prefs/apps/ and get your ```client_id``` and ```client_secret```.
 - Edit the ```details.ini``` file with your details.
